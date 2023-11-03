@@ -121,14 +121,17 @@ registro.addEventListener('click', function () {
 
     if (horaActual < horasApertura) {
         // Si la hora actual es anterior a la hora de apertura, calcula el tiempo restante hasta la apertura
-        diferenciaHoras = horasAperturaEntero - horaActual
-        diferenciaMinutos = minutosAperturaEntero - minutosActuales
+        diferenciaHoras = (24+ horasAperturaEntero - horaActual)%24
+        diferenciaMinutos = (60+ minutosAperturaEntero - minutosActuales)%60
         mensaje = `Para abrir quedan: ${diferenciaHoras} horas y ${diferenciaMinutos} minutos`
-    } else if (horaActual >= horasCierre) {
-        // Si la hora actual es posterior a la hora de cierre, calcula el tiempo restante hasta la próxima apertura
-        diferenciaHoras = horaActual + horasAperturaEntero
-        diferenciaMinutos = minutosAperturaEntero - minutosActuales
+    }
+    if(horaActual > horasApertura){
+        diferenciaHoras =  24-(horaActual-horasAperturaEntero)
+        diferenciaMinutos = (60 + minutosActuales- minutosAperturaEntero)%60
         mensaje = `Para abrir quedan: ${diferenciaHoras} horas y ${diferenciaMinutos} minutos`
+    }
+    if(horaActual==horasApertura){
+        mensaje=`Acaba de abrir: 0 horas`
     }
     resultado.innerHTML = mensaje
 });
