@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="bootstrapYeti.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Nou fitxer per a estils addicionals -->
     <script src="https://kit.fontawesome.com/a70ef8b3fc.js" crossorigin="anonymous"></script>
-    
   </head>
   <body>
     <!-- HEADER -->
@@ -16,36 +16,41 @@
         <a class="navbar-brand" href="index.html">
           <img src="imagenes/logo.svg" alt="logo" width="30" height="25" class="d-inline-block align-text-top">Vanilla Games
         </a>
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Top5 Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Acerca de</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="iniciasesion.html"><button class="btn btn-success me-2 rounded-0">Iniciar Sesión <i class="fa-solid fa-right-to-bracket"></i></button></a>
-          </li>
-          <li class="nav-item">
-            <a href="registro.html"><button class="btn border rounded-0 text-light">Regístrate <i class="fa-solid fa-right-to-bracket"></i></button></a>
-          </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Top5 Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Acerca de</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="iniciasesion.html"><button class="btn btn-success me-2 rounded-0">Iniciar Sesión <i class="fa-solid fa-right-to-bracket"></i></button></a>
+            </li>
+            <li class="nav-item">
+              <a href="registro.html"><button class="btn border rounded-0 text-light">Regístrate <i class="fa-solid fa-right-to-bracket"></i></button></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-    
 
     <!-- MAIN -->
     <div class="container text-center my-4">
-      <h1 style="font-size: 100px ; font-weight: bold;">Vanilla Games</h1>
-      <img src="imagenes/logo.svg" alt="logo" width="500px" class="py-5">
+      <h1 class="display-2 font-weight-bold">Vanilla Games</h1>
+      <img src="imagenes/logo.svg" alt="logo" class="img-fluid py-5"> <!-- Utilitzar img-fluid per a imatges responsives -->
     </div>
-     <!-- FOOTER -->
-     <nav class="fixed-bottom text-center bg-light py-3">
+
+    <!-- FOOTER -->
+    <nav class="fixed-bottom text-center bg-light py-3">
       <div class="row">
         <div class="col">
           <img src="imagenes/logo.svg" alt="logo" width="30" height="25" class="d-inline-block align-text-top">
@@ -59,6 +64,7 @@
         </div>
       </div>
     </nav>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
