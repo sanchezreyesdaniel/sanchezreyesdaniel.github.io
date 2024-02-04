@@ -1,0 +1,81 @@
+
+
+header, main, footer {
+    min-height: 300px;
+    text-align: center;
+    color: white;
+}
+
+header {
+    background-color: #3498db; /* Azul */
+}
+
+main {
+    height: 100px;
+    background-color: #2ecc71; /* Verde */
+}
+
+footer {
+    background-color: #e74c3c; /* Rojo */
+    
+}
+.tarjeta {
+    transform: rotate(-20deg);
+    position: absolute;
+    bottom: 0; /* Inicialmente oculta en la parte inferior del pie de página */
+    margin-left: 1400px;
+    transition: all 0.7s ease;
+}
+
+footer:hover .tarjeta {
+    bottom: 300px;
+    transition: all 0.3s ease;
+}
+
+.tarjeta:hover{
+    transform: rotateY(180deg);
+}
+.tarjeta:hover p{
+    transform: rotateY(180deg);
+    visibility: visible;
+}
+
+.tarjeta p{
+    margin-top: 100px;
+    margin-bottom: -1000px;
+    margin-left: 130px;
+    color: white;
+    position: absolute;
+    visibility: hidden;
+}
+
+@keyframes complexAnimation {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        background-color: #ffcc00;
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    }
+    25%, 75% {
+        transform: scale(1.2) rotate(180deg);
+        background-color: #ff6666;
+        box-shadow: 0 0 20px rgba(255, 102, 102, 0.8);
+    }
+    50% {
+        transform: scale(1.5) rotate(360deg);
+        background-color: #66cc66;
+        box-shadow: 0 0 30px rgba(102, 204, 102, 0.8);
+    }
+}
+
+main img {
+    animation: complexAnimation 6s infinite;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; 
+}
+
+main img:hover {
+    transform: scale(1.8) rotate(360deg); 
+}
+
+
+
